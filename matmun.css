@@ -1,0 +1,31 @@
+*{
+  font-family:"Raleway";
+}
+.navbar{
+  margin-bottom: 0;
+  background-color:rgba(128,151,237,1);
+}
+.navbar-brand{
+  font-weight:600;
+}
+.navbar + .container-fluid{
+  margin: 0 2em 0 2em;
+}
+.jumbotron .container{
+  width: 90vw;
+}
+.jumbotron .container{
+  text-align: center;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+  background-color:rgb(176, 191, 242);
+  font-weight: 600;
+  color: white;
+}
+.navbar-default .navbar-nav>li>a{
+  color:white;
+}
+.navbar-default .navbar-brand {
+  color: white;
+}
