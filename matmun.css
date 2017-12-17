@@ -82,6 +82,31 @@
   margin-bottom: 5em; 
 }
 
+
+.topBackground{
+  width:100%;
+height: 35px;
+background-color: rgba(128,151,237,1);
+}
+.footer{
+width:100%;
+height: 60px;
+margin:0px;
+}
+
+#void{
+  font-weight: 600;
+  text-align: center;
+  background-color: rgba(128,151,237,1);
+  margin:0px;
+  height: 35px;
+}
+
+footer a {
+  font-size: 1.5em;
+  margin:0px;
+}
+
 #map{
   width: 100%;
   height: 400px;
