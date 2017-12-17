@@ -52,20 +52,45 @@
       <!-- The countdown area starts here -->
   <div class="container" id="countdown">
     <div class="row">
-      <div class="col-md-3">
-        <p class="round" id="days"> 360 </p>
+      <div class="col-md-3 round" id="days">
+        <p class="fontRoboto"> 360 </p>
+         <p class="round2">Days</p>
       </div>
-      <div class="col-md-3">
-        <p class="round" id="hours"> 360 </p>
+      <div class="col-md-3 round" id="hours">
+        <p class="fontRoboto"> 360 </p>
+        <p class="round2">Hours</p>
       </div>
-      <div class="col-md-3">
-        <p class="round" id="minutes"> 360 </p>
+      <div class="col-md-3 round" id="minutes">
+        <p class="fontRoboto"> 360 </p>
+        <p class="round2">Minutes</p>
       </div>
-      <div class="col-md-3">
-        <p class="round" id="seconds"> 360 </p>
+      <div class="col-md-3 round" id="seconds">  
+        <p class="fontRoboto"> 360 </p>
+        <p class="round2">Seconds</p>
       </div>
     </div>
    </div>
+
+
+   <!-- The Google Maps Footer starts here -->
+
+   <div id="map"> </div>
+    <script>
+      function initMap() {
+        var uluru = {lat: 25.916871, lng: -97.569278};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 17,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMwm2a3FVq8QuZ7s_OGa3kVA43GdqtezY&callback=initMap">
+    </script>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

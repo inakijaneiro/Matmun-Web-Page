@@ -45,10 +45,21 @@
   text-align: center;
   border-color: black;
   border-style: solid;
-  padding-top: 1.7em;
-  padding-bottom: 1.7em;
+  padding-top: 1.2em;
+  padding-bottom: 1.2em;
   width: 5em;
-  margin: auto;
+  margin-right: 0.11em;
+  margin-left: 0.11em;
+}
+
+.fontRoboto{
+  font-family: "Roboto";
+}
+
+.round2{
+  text-align: center;
+  font-size: 0.5em;
+  font-weight: 
 }
 
 #days{
@@ -69,4 +80,10 @@
 
 #countdown{
   margin-bottom: 5em; 
+}
+
+#map{
+  width: 100%;
+  height: 400px;
+  background-color: gray;
 }
