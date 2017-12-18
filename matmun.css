@@ -1,6 +1,7 @@
 *{
   font-family:"Raleway";
 }
+/*Navbar*/
 .navbar{
   margin-bottom: 0;
   background-color:rgba(128,151,237,1);
@@ -30,16 +31,9 @@
   color: white;
 }
 
+/*Countdown*/
 .round {
-  /* Safari 3-4, iOS 1-3.2, Android 1.6- */
-  -webkit-border-radius: 1000px; 
-
-  /* Firefox 1-3.6 */
-  -moz-border-radius: 1000px; 
-  
-  /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
   border-radius: 100000px; 
-
   font-family: "Roboto";
   font-size:4em;
   text-align: center;
@@ -82,27 +76,19 @@
   margin-bottom: 5em; 
 }
 
-
+/*Google Maps*/
 .topBackground{
   width:100%;
-height: 35px;
-background-color: rgba(128,151,237,1);
+  height: 35px;
+  background-color: rgba(128,151,237,1);
 }
 .footer{
-width:100%;
-height: 60px;
-margin:0px;
-}
-
-#void{
-  font-weight: 600;
-  text-align: center;
-  background-color: rgba(128,151,237,1);
+  width:100%;
+  height: 60px;
   margin:0px;
-  height: 35px;
-}
+  }
 
-footer a {
+.footer a {
   font-size: 1.5em;
   margin:0px;
 }
@@ -111,4 +97,23 @@ footer a {
   width: 100%;
   height: 400px;
   background-color: gray;
+}
+
+/* Void(); */
+#void{
+  font-size: 1.5rem;
+  font-weight: 600;
+  background-color: rgb(128,151,237);
+  margin:0px;
+  height: 35px;
+}
+#void p{
+  position: relative;
+  height: 100%;
+  text-align: center;
+  padding-top: .75rem;
+}
+#void a{
+  font-size: 1.5rem;
+  color: white;
 }
