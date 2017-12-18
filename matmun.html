@@ -77,26 +77,28 @@
 
   <!-- The Google Maps Footer starts here -->
    <footer class="footer">
-    <div class="topBackground"> </div>
-    <div id="map"> </div>
-      <script>
-        function initMap() {
-          var uluru = {lat: 25.916871, lng: -97.569278};
-          var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 17,
-            center: uluru
-          });
-          var marker = new google.maps.Marker({
-            position: uluru,
-            map: map
-          });
-        }
-      </script>
-      <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMwm2a3FVq8QuZ7s_OGa3kVA43GdqtezY&callback=initMap">
-      </script>
-    <div id="void">
-      <p> Desarrollado por: <a target="_blank" href="http://www.void.mx/">void();</a></p>
+  <!--   <div class="topBackground"> </div> -->
+  <div class="container">
+      <div id="map"> </div>
+        <script>
+          function initMap() {
+            var uluru = {lat: 25.916871, lng: -97.569278};
+            var map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 17,
+              center: uluru
+            });
+            var marker = new google.maps.Marker({
+              position: uluru,
+              map: map
+            });
+          }
+        </script>
+        <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMwm2a3FVq8QuZ7s_OGa3kVA43GdqtezY&callback=initMap">
+        </script>
+      <div id="void">
+        <p> Desarrollado por: <a target="_blank" href="http://www.void.mx/">void();</a></p>
+      </div>
     </div>
    </footer>
 
