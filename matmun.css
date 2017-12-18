@@ -112,6 +112,7 @@
   height: 100%;
   text-align: center;
   padding-top: .75rem;
+  margin-bottom:0px;
 }
 #void a{
   font-size: 1.5rem;
