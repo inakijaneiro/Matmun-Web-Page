@@ -1,0 +1,34 @@
+{
+  "name": "matmun-web-page",
+  "version": "1.0.0",
+  "description": "Web Page for the Model of United Nations: MATMUN",
+  "main": "app.js",
+  "contributors": [
+    {
+      "name": "Inaki Janeiro Olague",
+      "email": "inakijaneiro@gmail.com"
+    },
+    {
+      "name": "Sergio Diosdado Castelazo",
+      "email": "sgdc98@gmail.com"
+    }
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inakijaneiro/Matmun-Web-Page.git"
+  },
+  "author": "void",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/inakijaneiro/Matmun-Web-Page/issues"
+  },
+  "homepage": "https://github.com/inakijaneiro/Matmun-Web-Page#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2"
+  }
+}
