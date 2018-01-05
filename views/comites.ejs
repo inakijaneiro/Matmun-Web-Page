@@ -1,0 +1,9 @@
+<%include partials/header%>
+<hr>
+
+<% for (var i = 0; i < committee.length; i++) { %>
+	<p> <%=committee[i].name%> </p>
+	<img src="<%=committee[i].image%>">
+<% } %>
+
+<%include partials/footer%>
