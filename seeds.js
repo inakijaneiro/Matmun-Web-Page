@@ -8,7 +8,15 @@ var data = [
 	},
 	{
 		name: "Consejo de Seguridad",
-		image: "http://www.un.org/waterforlifedecade/images/logos/logo_69th_session_un_general_assembly_eng.png"
+		image: "http://3.bp.blogspot.com/-QXPwEPSoW2Y/VrAZFng81BI/AAAAAAAAHdE/LJnpjdDKzes/s400/United-Nations-Security-Council.png"
+	},
+	{
+		name: "ECOSOC",
+		image: "http://www.un.org/waterforlifedecade/images/events/logo_ecosoc_eng.png"
+	},
+	{
+		name: "UNWOMEN",
+		image: "https://www.newvision.co.ug/w-images/0c797dc9-9f7f-4e25-9dc6-0b08b6b5c423/1/unwomen-703x422.jpg"
 	}
 ] 
 
