@@ -11,23 +11,23 @@
     <title>Matmun 2018: Tomando Acción</title>
 </head>
 <body class="HomePage">
-  <div class="Grid-Container" id="HomePage">
+  <div class="Grid-Container Container" id="HomePage">
     <!-- Encabezado -->
-    <header class="Header">
+    <header class="Header Container">
         <div class="Header_Logo">
             <a href="#HomePage" class="Navbar_Link">
                 <img src="#" alt="" class="Header_img">
             </a>
         </div>
         <span class="open toggle icon-bars" onclick="openNav()"></span>
+        <!-- Menu de navegación -->
+        <nav class="Navbar" id="Navbar">
+            <span class="close toggle" onclick="closeNav()">X</span>
+            <h2 class="Navbar_item">Menú</h2>
+            <ul class="Menu">
+                <li class="Menu_item"><a href="/comites" class="Menu_Link">Comités</a></li> 
+                <li class="Menu_item"><a href="#" class="Menu_Link">Delegados</a></li>
+                <li class="Menu_item"><a href="#" class="Menu_Link">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
-    <!-- Menu de navegación -->
-    <nav class="Navbar" id="Navbar">
-        <span class="close toggle" onclick="closeNav()">X</span>
-        <h2 class="Navbar_item">Menú</h2>
-        <ul class="Menu">
-            <li class="Menu_item"><a href="/comites" class="Menu_Link">Comités</a></li> 
-            <li class="Menu_item"><a href="/delegados" class="Menu_Link">Delegados</a></li>
-            <li class="Menu_item"><a href="/contacto" class="Menu_Link">Contacto</a></li>
-        </ul>
-    </nav>

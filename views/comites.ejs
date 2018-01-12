@@ -1,9 +1,10 @@
 <%include partials/header%>
-<hr>
 
+<div class="Content_container">
 <% for (var i = 0; i < committee.length; i++) { %>
 	<p> <%=committee[i].name%> </p>
 	<img src="<%=committee[i].image%>">
 <% } %>
+</div>
 
-<!--<%include partials/footer%>-->
+<%include partials/footer%> 

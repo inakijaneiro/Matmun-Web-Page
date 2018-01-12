@@ -1,10 +1,13 @@
 // Including npm packages
-var express = require("express"),
- 	app = express(),
- 	bodyParser = require("body-parser"),
- 	mongoose = require("mongoose"),
- 	Committee = require("./models/committee");
- 	seedDB = require("./seeds");
+var express 		= require("express"),
+ 	app 			= express(),
+ 	bodyParser 		= require("body-parser"),
+ 	mongoose 		= require("mongoose"),
+ 	passport 		= require("passport"),
+ 	localStrategy 	= require("passport-local"),
+ 	Committee 		= require("./models/committee"),
+ 	User 			= require("./models/user"),
+ 	seedDB 			= require("./seeds");
 
 
 seedDB();
@@ -13,6 +16,18 @@ app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine", "ejs");
 mongoose.connect("mongodb://localhost/matmun");
+
+//PASSPORT CONFIGURATION
+app.use(require("express-session")({
+	secret: "MATMUN 2018: TOMANDO ACCION DEVELOPED BY VOID",
+	resave: false,
+	saveUninitialized: false
+}));
+app.use(passport.initialize());
+app.use(passport.session());
+passport.use(new localStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
 
 // Routing
 app.get("/", function(req, res){

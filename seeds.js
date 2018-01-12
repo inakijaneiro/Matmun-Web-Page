@@ -1,7 +1,8 @@
 var mongoose = require("mongoose");
 var Committee = require("./models/committee");
+var User = require("./models/user");
 
-var data = [
+var dataCommittee = [
 	{
 		name: "Asamblea General",
 		image: "http://www.un.org/waterforlifedecade/images/logos/logo_69th_session_un_general_assembly_eng.png"
@@ -20,24 +21,28 @@ var data = [
 	}
 ] 
 
+
+
 //Delete Committees
 function seedDb(){
 	Committee.remove({}, function(err){
 		if (err){
 			console.log(err);
-		} else{
+		}
+		else{
 			console.log("Removed Committees");
+			//Add Committees
+			for (var i = 0; i < dataCommittee.length; i++){
+				Committee.create(dataCommittee[i], function(err, data){
+					if (err){
+						console.log(err)
+					} 
+					else{
+						console.log("New Data created!");
+					}
+				});
+			}
 		}
 	});
-	//Add Committees
-	for (var i = 0; i < data.length; i++){
-		Committee.create(data[i], function(err, data){
-			if (err){
-				console.log(err)
-			} else{
-				console.log("New Data created!");
-			}
-		});
-	}
 }
 module.exports = seedDb;
