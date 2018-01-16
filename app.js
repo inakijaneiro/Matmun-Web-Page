@@ -32,7 +32,7 @@ passport.deserializeUser(User.deserializeUser());
 // Routing
 app.get("/", function(req, res){
 	res.render("main");
-});
+});	
 
 app.get("/comites", function(req, res){
 	//Get all Committee Data
@@ -43,6 +43,14 @@ app.get("/comites", function(req, res){
  			res.render("comites", {committee:committee});
  		}
 	});
+});
+
+app.get("/delegados", function(req, res){
+	res.render("delegados");
+});
+
+app.get("/contacto", function(req, res){
+	res.render("contacto");
 });
 
 app.get("*", function(req, res){
