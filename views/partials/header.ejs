@@ -8,26 +8,31 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700" rel="stylesheet"> 
     <link rel="stylesheet" href="../stylesheets/styles.css">
     <script type="text/javascript" src="../javascripts/script.js"></script>
+    <link rel="shortcut icon" href="../images/Tomando Accion logo 1.png" />
     <title>Matmun 2018: Tomando Acción</title>
 </head>
 <body class="HomePage">
-  <div class="Grid-Container Container" id="HomePage">
+  <div class="Grid-Container">
     <!-- Encabezado -->
-    <header class="Header Container">
-        <div class="Header_Logo">
-            <a href="/" class="Navbar_Link">
-                <img src="#" alt="" class="Header_img">
-            </a>
+    <header class="Header">
+        <div class="Header_content Container">
+            <div class="Header_Logo">
+                <a href="index.html" class="Navbar_Link">
+                    <img src="../images/Tomando Accion logo LETRAS 2.png" alt="" class="Header_img">
+                </a>
+            </div>
+            <span class="open toggle icon-bars" onclick="openNav()"></span>
+            <!-- Menu de navegación -->
+            <nav class="Navbar" id="Navbar">
+                <span class="close toggle" onclick="closeNav()">X</span>
+                <h2 class="Navbar_item">Menú</h2>
+                <ul class="Menu">
+                    <li class="Menu_item"><a href="/comites" class="Menu_Link">Comités</a></li> 
+                    <li class="Menu_item"><a href="/delgados" class="Menu_Link">Delegados</a></li>
+                    <li class="Menu_item"><a href="/contacto" class="Menu_Link">Contacto</a></li>
+                    <li class="Menu_item"><a href="/login" class="Menu_Link">Iniciar sesión</a></li>
+                </ul>
+            </nav>
         </div>
-        <span class="open toggle icon-bars" onclick="openNav()"></span>
-        <!-- Menu de navegación -->
-        <nav class="Navbar" id="Navbar">
-            <span class="close toggle" onclick="closeNav()">X</span>
-            <h2 class="Navbar_item">Menú</h2>
-            <ul class="Menu">
-                <li class="Menu_item"><a href="/comites" class="Menu_Link">Comités</a></li> 
-                <li class="Menu_item"><a href="/delegados" class="Menu_Link">Delegados</a></li>
-                <li class="Menu_item"><a href="/contacto" class="Menu_Link">Contacto</a></li>
-            </ul>
-        </nav>
     </header>
+    <div class="Content_container">

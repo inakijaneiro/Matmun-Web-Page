@@ -1,10 +1,11 @@
 <%include partials/header%>
-
 <div class="Content_container">
-<% for (var i = 0; i < committee.length; i++) { %>
-	<p> <%=committee[i].name%> </p>
-	<img src="<%=committee[i].image%>">
-<% } %>
-</div>
-
+	<div class="Comites Container">
+		<h1 class="Comites_title">Comités</h1>
+			<% for (var i = 0; i < committee.length; i++) { %>
+		            <div class="Comites_item Comites_<%=committee[i].shortcut%>">
+		                <a href="/comites/<%=committee[i].urlExt%>" class="Comites_Link"></a>
+		            </div>
+		    <% } %>
+	</div>
 <%include partials/footer%> 

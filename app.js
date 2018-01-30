@@ -9,7 +9,6 @@ var express 		= require("express"),
  	User 			= require("./models/user"),
  	seedDB 			= require("./seeds");
 
-
 seedDB();
 // Basic express perimissions
 app.use(express.static(__dirname + "/public"));
@@ -45,6 +44,19 @@ app.get("/comites", function(req, res){
 	});
 });
 
+app.get("/comites/:name", function(req, res){
+	var name = req.params.name;
+	console.log(req.query);
+	Committee.findOne({urlExt: name}, function(err, com){
+		if (err){
+			console.log(err);
+		}
+		else{
+			res.render("Comite", {committee: com});
+		}
+	})
+});
+
 app.get("/delegados", function(req, res){
 	res.render("delegados");
 });
@@ -56,7 +68,6 @@ app.get("/contacto", function(req, res){
 app.get("*", function(req, res){
 	res.send("Page not found. ERROR 404");
 });
-
 
 // Port opening
 app.listen(3000, function(){
