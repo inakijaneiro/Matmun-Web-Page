@@ -1,1 +1,96 @@
-<h1> <%= committee.name %> </h1>
+<%include partials/header%>
+        <section class="Comite Container">
+            <div class="Comite_content">
+            <h1 class="Comite_title">
+                <%=committee.name%>
+            </h1>
+            <p class="Comite_description">
+                <%=committee.description%>
+            </p>
+            </div>
+            <div class="Comite_img-container">
+                <img src="../images/<%=committee.shortcut%>.png" alt="" class="Comite_img">
+            </div>
+            <div class="Comite_download">
+                <div class="Comite_Tema">
+                    <h2 class= "Comite_subtitle"><a href="#" class="Comite_Link">Antecedentes Tema 1</a></h2>
+                </div>
+                <div class="Comite_Tema">
+                    <h2 class= "Comite_subtitle"><a href="#" class="Comite_Link">Antecedentes Tema 2</a></h2>
+                </div>
+            </div>
+        </section>
+
+        <!-- IF Comite es Corte -->
+        <% if (committee.name === "Corte Interamericana de Derechos Humanos") { -%>
+            <section class="Quorum Container tables">
+                <h2 class = "Quorum_title">Quorum</h2>
+                <table class="Quorum_table tables_other">
+                    <thead class="Quorum_head">
+                        <tr class="Quorum_row">
+                                <th class="Quorum_h"></th>
+                                <th class="Quorum_h Quorum_Flag">Puesto</th>
+                                <th class ="Quorum_h">Cantidad</th>
+                            </tr>
+                        </thead>
+                        <tbody class="Quorum_body">
+                            <% for (var i = 0; i < committee.quorum.length; i++) { -%>
+                                <tr class="Quorum_row">
+                                    <td class="Quorum_Flag Quorum_right"><span class="icon-<%=committee.quorum[i].shortcut%>"></span></td>
+                                    <td class="Quorum_left"><%=committee.quorum[i].name%></td>
+                                    <td class=Quorum_right>7</th>
+                                </tr>
+                            <% } -%>
+                        </tbody>
+                </table>
+            <!-- ELSE cualquier otro comité -->
+                        <% } else { -%>
+                            <section class="Quorum Container">
+                                <h2 class = "Quorum_title">Quorum</h2>
+                                <table class="Quorum_table tables_other">
+                                    <thead class="Quorum_head">
+                                        <tr class="Quorum_row">                        
+                                            <th class="Quorum_h">País</th>
+                                            <th class="Quorum_h Quorum_Flag">Bandera</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="Quorum_body">
+                                        <% for (var i = 0; i < committee.quorum.length/2; i++) { -%>
+                                            <tr class="Quorum_row">
+                                                <td class="Quorum_left"><%=committee.quorum[i].name%></td>
+                                                <td class="Quorum_Flag Quorum_right"><span class="flag-icon flag-icon-<%=committee.quorum[i].shortcut%>"></span></td>
+                                            </tr>
+                                        <% } -%>
+                                    </tbody>
+                                </table>
+                                <table class="Quorum_table">
+                                    <thead class="Quorum_head">
+                                        <tr class="Quorum_row">
+                                            <th class="Quorum_h">País</th>
+                                            <th class="Quorum_h Quorum_Flag">Bandera</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="Quorum_body">
+                                        <% for (var i = committee.quorum.length/2; i < committee.quorum.length; i++) { -%>
+                                            <tr class="Quorum_row">
+                                                <td class="Quorum_left"><%=committee.quorum[i].name%></td>
+                                                <td class="Quorum_Flag Quorum_right"><span class="flag-icon flag-icon-<%=committee.quorum[i].shortcut%>"></span></td>
+                                            </tr>
+                        <% } -%>
+                    </tbody>                            
+            </table>
+        <% } -%>
+        </section>
+        <section class="Mesa Container">
+            <img src="../images/foto-min.jpeg" alt="Escritorio" class="Mesa_img">
+            <div class="Mesa_info">
+                <% for (var i = 0; i < committee.chair.length; i++) { -%>
+                    <div class="Mesa_miembro">
+                        <p class="Mesa_nombre"><%=committee.chair[i].name%></p>
+                        <p class="Mesa_puesto"><a class="Footer_Link" href="tel:<%=committee.chair[i].number%>"><%=committee.chair[i].number%></a></p>
+                        <p class="Mesa_correo"><a class="Footer_Link" href="<%=committee.chair[i].email%>"><%=committee.chair[i].email%></a></p>
+                    </div>
+                <% } -%>
+            </div>
+        </section>
+<%include partials/footer%>

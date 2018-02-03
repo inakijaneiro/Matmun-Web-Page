@@ -7,8 +7,8 @@ var express 		= require("express"),
  	localStrategy 	= require("passport-local"),
  	Committee 		= require("./models/committee"),
  	User 			= require("./models/user"),
- 	seedDB 			= require("./seeds");
-
+ 	seedDB 			= require("./seeds"),
+ 	nodemailer		= require("nodemailer");
 seedDB();
 // Basic express perimissions
 app.use(express.static(__dirname + "/public"));
@@ -28,6 +28,17 @@ passport.use(new localStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
+// NODEMAILER SETUP
+var transporter = nodemailer.createTransport({
+ service: 'gmail',
+ auth: {
+        user: 'no.reply.voidmx@gmail.com',
+        pass: 'voidmx2018'
+    }
+});
+
+
+
 // Routing
 app.get("/", function(req, res){
 	res.render("main");
@@ -46,7 +57,6 @@ app.get("/comites", function(req, res){
 
 app.get("/comites/:name", function(req, res){
 	var name = req.params.name;
-	console.log(req.query);
 	Committee.findOne({urlExt: name}, function(err, com){
 		if (err){
 			console.log(err);
@@ -63,6 +73,25 @@ app.get("/delegados", function(req, res){
 
 app.get("/contacto", function(req, res){
 	res.render("contacto");
+});
+
+app.post("/contacto", function(req, res){
+	var data = req.body;
+    let mailOptions = {
+        from: '"VOID MX" <no.reply.voidmx@gmail.com>', // sender address
+        to: "A00516978@itesm.mx", // list of receivers
+        subject: data.subject, // Subject line
+        html: '<p><strong>name: </strong>' + data.name + '</p>' +
+        	  '<p><strong>email: </strong>' + data.email + '</p>'+
+        	  '<p><strong>Telefono: </strong>' + data.phone + '</p>'+
+        	  '<p><strong>Mensaje: </strong>' + data.text + '</p>'// html body
+    };
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            return console.log(error);
+        }
+		res.redirect("/");        
+    });
 });
 
 app.get("*", function(req, res){
