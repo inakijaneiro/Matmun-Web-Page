@@ -13,21 +13,56 @@
         <title>Matmun 2018: Contacto</title>
 </head>
 <body>
+    <header class="Header">
+        <div class="Header_content Container">
+            <div class="Header_Logo">
+                <a href="index.html" class="Navbar_Link">
+                    <img src="../images/Tomando Accion logo LETRAS 2.png" alt="" class="Header_img">
+                </a>
+            </div>
+            <span class="open toggle icon-bars" onclick="openNav()"></span>
+            <!-- Menu de navegación -->
+            <nav class="Navbar" id="Navbar">
+                <span class="close toggle" onclick="closeNav()">X</span>
+                <h2 class="Navbar_item">Menú</h2>
+                <ul class="Menu">
+                    <li class="Menu_item"><a href="Comites.html" class="Menu_Link">Comités</a></li> 
+                    <li class="Menu_item"><a href="Delegados.html" class="Menu_Link">Delegados</a></li>
+                    <li class="Menu_item"><a href="Contacto.html" class="Menu_Link">Contacto</a></li>
+                    <!-- <li class="Menu_item"><a href="#" class="Menu_Link">Iniciar sesión</a></li> -->
+                </ul>
+            </nav>
+        </div>
+    </header>
     <div class="Content_container">
-
-        <form action="/contacto" method="POST" class="Form Container">
-            <label for="name">Nombre:</label>
-            <input type="text" id="full_name" name="name" placeholder="Juan Pérez" required>
-            <label for="email">Corre electrónico:</label>
-            <input type="email" id="email_addr" name="email" required/>
-            <label for="phone">Teléfono:</label>
-            <input type="number" id="phone" name="phone"/>
-            <label for="subject">Asunto:</label>
-            <input type="text" id="subject" name="subject" placeholder="Crisis" required>
-            <label for="msg">Mensaje:</label>
-            ​<textarea id="msg" name="msg" rows="10" cols="70" required></textarea>
-            <input type="submit">
-        </form>
+        <section class="Form Container">
+            <h2 class="Form_title">Contacto</h2>
+            <form action="/contacto" method="POST" class="Form_main">
+                <div class="Form_name Form_item">
+                    <label for="name">Nombre: <span class="Form_required">*</span></label>
+                    <input type="text" id="full_name" name="name" placeholder="Juan Pérez" required>
+                </div>
+                <div class="Form_email Form_item">
+                    <label for="email">Corre electrónico: <span class="Form_required">*</span></label>
+                    <input type="email" id="email_addr" name="email" placeholder="juan@ejemplo.com"required/>
+                </div>
+                <div class="Form_phone Form_item">
+                    <label for="phone">Teléfono: </label>
+                    <input type="number" id="phone" name="phone" placeholder="999-8765-4321"/>
+                </div>
+                <div class="Form_subject Form_item">
+                    <label for="subject">Asunto: <span class="Form_required">*</span></label>
+                    <input type="text" id="subject" name="subject" placeholder="Crisis" required>
+                </div>
+                <div class="Form_msg Form_item">
+                    <label for="msg">Mensaje: <span class="Form_required">*</span></label>
+                    ​<textarea id="msg" name="msg" rows="10" cols="70" placeholder="Hola..."required></textarea>
+                    <input class="Form_submit" type="submit">
+                </div>
+                
+            </form>
+        </section>
+        
         <footer class="Footer">
             <div class="Footer_content">
                 <div class = "Footer_container">
