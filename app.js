@@ -63,7 +63,7 @@ app.get("/comites/:name", function(req, res){
 			console.log(err);
 		}
 		else{
-			res.render("Comite", {committee: com});
+			res.render("comite", {committee: com});
 		}
 	})
 });
