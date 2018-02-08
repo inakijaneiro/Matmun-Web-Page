@@ -99,6 +99,6 @@ app.get("*", function(req, res){
 });
 
 // Port opening
-app.listen(process.env.IP, process.env.PORT, function(){
+app.listen(process.env.PORT, function(){
 	console.log("SERVER RUNNING ON PORT 3000");
 });
