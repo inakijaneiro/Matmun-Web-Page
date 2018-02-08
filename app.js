@@ -14,7 +14,7 @@ seedDB();
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine", "ejs");
-mongoose.connect("mongodb://localhost/matmun");
+//mongoose.connect("mongodb://localhost/matmun");
 
 //PASSPORT CONFIGURATION
 app.use(require("express-session")({
