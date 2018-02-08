@@ -13,10 +13,7 @@
             </div>
             <div class="Comite_download">
                 <div class="Comite_Tema">
-                    <h2 class= "Comite_subtitle"><a href="#" class="Comite_Link">Antecedentes Tema 1</a></h2>
-                </div>
-                <div class="Comite_Tema">
-                    <h2 class= "Comite_subtitle"><a href="#" class="Comite_Link">Antecedentes Tema 2</a></h2>
+                    <h2 class= "Comite_subtitle"><a href="#" class="Comite_Link">Documentación del comité</a></h2>
                 </div>
             </div>
         </section>
@@ -82,13 +79,13 @@
         <% } -%>
         </section>
         <section class="Mesa Container">
-            <img src="../images/foto-min.jpeg" alt="Escritorio" class="Mesa_img">
+            <img src="../images/IMG_<%=committee.shortcut%>.JPG" alt="Escritorio" class="Mesa_img">
             <div class="Mesa_info">
                 <% for (var i = 0; i < committee.chair.length; i++) { -%>
                     <div class="Mesa_miembro">
                         <p class="Mesa_nombre"><%=committee.chair[i].name%></p>
                         <p class="Mesa_puesto"><a class="Footer_Link" href="tel:<%=committee.chair[i].number%>"><%=committee.chair[i].number%></a></p>
-                        <p class="Mesa_correo"><a class="Footer_Link" href="<%=committee.chair[i].email%>"><%=committee.chair[i].email%></a></p>
+                        <p class="Mesa_correo"><a class="Footer_Link" href="mailto:<%=committee.chair[i].email%>"><%=committee.chair[i].email%></a></p>
                     </div>
                 <% } -%>
             </div>

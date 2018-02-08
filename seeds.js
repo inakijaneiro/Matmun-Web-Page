@@ -93,19 +93,19 @@ var dataCommittee = [
 	description: "La Asamblea General, creada en 1945, es el principal organismo deliberativo, directivo y representativo de las Naciones Unidas. Integrado por los 193 miembros de la ONU, constituye un foro singular para las deliberaciones multilaterales sobre toda la gama de cuestiones internacionales que abarca la Carta de las Naciones Unidas. La Asamblea se reúne ordinariamente de septiembre a diciembre y se divide en seis comisiones: Desarme y seguridad internacional; asuntos económicos y financieros; asuntos sociales, humanitarios y culturales; política especial y de descolonización; asuntos administrativos y de presupuesto; comisión jurídica.",
 	chair: [
 				{
-					name: "Ariadna Ortega Garcia",
-					email: "ari_og@hotmail.com",
-					number: "+52 1 (868) 298 16 96"
+					name: "Osmara Arbizu Valdez",
+					email: "osmaraarvizu@hotmail.com",
+					number: "+52 1 (868) 125 62 80"
 				},
 				{
-					name: "José Antonio Ayala Quezada",
-					email: "pepe_tono98@hotmail.com",
-					number: "+52 1 (868) 170 64 21"
+					name: "Ana Osti",
+					email: "A00517163@itesm.mx",
+					number: "+52 1 (868) 838 25 91"
 				},
 				{
-					name: "Gudelio Chapa Razo",
-					email: "gudelio_chapa_razo@hotmail.com",
-					number: "+52 1 (894) 105 45 82"
+					name: "Abril Chavez",
+					email: "abrilelizabeth20@gmail.com",
+					number: "+52 1 (868) 297 74 11"
 				}
 	]
 
@@ -323,7 +323,7 @@ var dataCommittee = [
 					},
 					{
 						name: "José Antonio Ayala Quezada",
-						email: "Pepe_tono98@hotmail.com",
+						email: "pepe_tono98@hotmail.com",
 						number: "+52 1 (868) 170 64 21"
 					},
 					{
