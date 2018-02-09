@@ -427,7 +427,7 @@ var dataCommittee = [
 						shortcut:"ca"
 					}
 		],
-		description: "Working for the empowerment of women and girls globally, Unwomen fights for gender equality in daily life situations where women’s human rights are not considered, or don’t exist at all. The primordial interests of this committee  include fighting to end violence against women, the economic empowerment of  women, and the promotion of women’s leadership acceptance and political participation, as well as the inclusion of women in certain industries, organizations and groups of their interest.",
+		description: "El Consejo Económico y Social de las Naciones Unidas (ECOSOC) fue creado cuando surgió la ONU, y es uno de los principales órganos de la ya mencionada ONU, ya que el objetivo de esta es lograr una cooperación internacional para solucionar problemas de índole social y económica, es controlada por la Asamblea, también considerado por muchos delegados la más importante en las Naciones Unidas. El Consejo Económico y Social está en el  Capítulo X,  es considerado un órgano de participación restringida e intergubernamental.",
 		chair:[
 					{
 						name: "Israel Castro Ortiz ",
