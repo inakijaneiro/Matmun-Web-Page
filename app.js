@@ -96,7 +96,7 @@ app.post("/contacto", function(req, res){
         html: '<p><strong>name: </strong>' + data.name + '</p>' +
         	  '<p><strong>email: </strong>' + data.email + '</p>'+
         	  '<p><strong>Telefono: </strong>' + data.phone + '</p>'+
-        	  '<p><strong>Mensaje: </strong>' + data.text + '</p>'// html body
+        	  '<p><strong>Mensaje: </strong>' + data.msg + '</p>'// html body
     };
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
