@@ -91,7 +91,7 @@ app.post("/contacto", function(req, res){
 	var data = req.body;
     let mailOptions = {
         from: '"VOID MX" <no.reply.voidmx@gmail.com>', // sender address
-        to: "arriaga.angel@live.com", // list of receivers
+        to: "sgdc98@gmail.com", // list of receivers
         subject: data.subject, // Subject line
         html: '<p><strong>name: </strong>' + data.name + '</p>' +
         	  '<p><strong>email: </strong>' + data.email + '</p>'+
