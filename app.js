@@ -8,13 +8,15 @@ var express 		= require("express"),
  	Committee 		= require("./models/committee"),
  	User 			= require("./models/user"),
  	seedDB 			= require("./seeds"),
- 	nodemailer		= require("nodemailer");
+ 	nodemailer		= require("nodemailer"),
+ 	fs 				= require("fs");
 seedDB();
 // Basic express perimissions
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine", "ejs");
-mongoose.connect("mongodb://localhost/matmun");
+//mongoose.connect("mongodb://localhost/matmun");
+mongoose.connect("mongodb://inakijaneiro:matmun18@ds229458.mlab.com:29458/matmun");
 
 //PASSPORT CONFIGURATION
 app.use(require("express-session")({
@@ -62,9 +64,19 @@ app.get("/comites/:name", function(req, res){
 			console.log(err);
 		}
 		else{
-			res.render("Comite", {committee: com});
+			res.render("comite", {committee: com});
 		}
 	})
+});
+
+app.get("/comites/documento/:name", function(req, res){
+	var documento = "/public/documents/" + req.params.name;
+
+	fs.readFile(__dirname + documento, function (err,data){
+		console.log(__dirname + documento);
+        res.contentType("application/pdf");
+        res.send(data);
+    });
 });
 
 app.get("/delegados", function(req, res){
@@ -79,7 +91,7 @@ app.post("/contacto", function(req, res){
 	var data = req.body;
     let mailOptions = {
         from: '"VOID MX" <no.reply.voidmx@gmail.com>', // sender address
-        to: "A00516978@itesm.mx", // list of receivers
+        to: "arriaga.angel@live.com", // list of receivers
         subject: data.subject, // Subject line
         html: '<p><strong>name: </strong>' + data.name + '</p>' +
         	  '<p><strong>email: </strong>' + data.email + '</p>'+
@@ -99,6 +111,6 @@ app.get("*", function(req, res){
 });
 
 // Port opening
-app.listen(process.env.PORT, function(){
+app.listen(process.env.PORT || 3000, function(){
 	console.log("SERVER RUNNING ON PORT 3000");
 });
