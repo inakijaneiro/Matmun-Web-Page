@@ -8,7 +8,8 @@ var express 		= require("express"),
  	Committee 		= require("./models/committee"),
  	User 			= require("./models/user"),
  	seedDB 			= require("./seeds"),
- 	nodemailer		= require("nodemailer");
+ 	nodemailer		= require("nodemailer"),
+ 	fs 				= require("fs");
 seedDB();
 // Basic express perimissions
 app.use(express.static(__dirname + "/public"));
@@ -66,6 +67,16 @@ app.get("/comites/:name", function(req, res){
 			res.render("comite", {committee: com});
 		}
 	})
+});
+
+app.get("/comites/documento/:name", function(req, res){
+	var documento = "/public/documents/" + req.params.name;
+
+	fs.readFile(__dirname + documento, function (err,data){
+		console.log(__dirname + documento);
+        res.contentType("application/pdf");
+        res.send(data);
+    });
 });
 
 app.get("/delegados", function(req, res){
