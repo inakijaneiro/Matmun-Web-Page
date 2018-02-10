@@ -13,7 +13,11 @@
             </div>
             <div class="Comite_download">
                 <div class="Comite_Tema">
-                    <h2 class= "Comite_subtitle"><a href="/comites/documento/<%=committee.shortcut%>.pdf" class="Comite_Link" target="_blank">Documentación del comité</a></h2>
+                    <% if (committee.name != "UNWOMEN") { -%>
+                        <h2 class= "Comite_subtitle"><a href="/comites/documento/<%=committee.shortcut%>.pdf" class="Comite_Link" target="_blank">Documentación del comité</a></h2>
+                    <% } else { -%>
+                        <h2 class= "Comite_subtitle"><a href="/comites/documento/<%=committee.shortcut%>.pdf" class="Comite_Link" target="_blank">Committee Documents</a></h2>
+                    <% } -%>
                 </div>
             </div>
         </section>
@@ -27,7 +31,7 @@
                         <tr class="Quorum_row">
                                 <th class="Quorum_h"></th>
                                 <th class="Quorum_h Quorum_Flag">Puesto</th>
-                                <th class ="Quorum_h">Cantidad</th>
+                                <th class ="Quorum_h">Lugares</th>
                             </tr>
                         </thead>
                         <tbody class="Quorum_body">
