@@ -4,9 +4,15 @@
             <h1 class="Comite_title">
                 <%=committee.name%>
             </h1>
-            <p class="Comite_description">
-                <%=committee.description%>
-            </p>
+            <% if (committee.name === "Corte Interamericana de Derechos Humanos")  { -%>
+                <p class="Comite_description">
+                    <%=committee.description%> <strong> Para conocer más sobre el documento de posición de este comité, ve el <a class="Footer_Link" href="https://youtu.be/1XIQTxEz1Rs"> video</a> que hemos preparado.</strong>
+                </p>                
+            <% } else { -%>
+                <p class="Comite_description">
+                    <%=committee.description%>
+                </p>                
+            <% } -%>
             </div>
             <div class="Comite_img-container">
                 <img src="../images/<%=committee.shortcut%>.png" alt="" class="Comite_img">

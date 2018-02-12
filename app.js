@@ -15,8 +15,8 @@ seedDB();
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine", "ejs");
-//mongoose.connect("mongodb://localhost/matmun");
-mongoose.connect("mongodb://inakijaneiro:matmun18@ds229458.mlab.com:29458/matmun");
+
+mongoose.connect(process.env.DATABASEURL);
 
 //PASSPORT CONFIGURATION
 app.use(require("express-session")({
@@ -112,5 +112,10 @@ app.get("*", function(req, res){
 
 // Port opening
 app.listen(process.env.PORT || 3000, function(){
-	console.log("SERVER RUNNING ON PORT 3000");
+	if (process.env.PORT){
+		console.log("SERVER RUNNING ON PORT " + process.env.PORT);
+	}
+	else{
+		console.log("SERVER RUNNING ON PORT 3000");
+	}
 });

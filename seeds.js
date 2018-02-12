@@ -493,6 +493,16 @@ var dataCommittee = [
 	}
 ] 
 
+function create(i){
+	Committee.create(dataCommittee[i], function(err, data){
+		if (err){
+			console.log(err)
+		} 
+		else{
+			console.log("New Data created!");
+		}
+	});
+}
 //Delete Committees
 function seedDb(){
 	Committee.remove({}, function(err){
@@ -503,15 +513,16 @@ function seedDb(){
 			console.log("Removed Committees");
 			//Add Committees
 			for (var i = 0; i < dataCommittee.length; i++){
-				Committee.create(dataCommittee[i], function(err, data){
-					if (err){
-						console.log(err)
-					} 
-					else{
-						console.log("New Data created!");
-					}
-				});
-			}
+			create(i);
+				// Committee.create(dataCommittee[i], function(err, data){
+				// 	if (err){
+				// 		console.log(err)
+				// 	} 
+				// 	else{
+				// 		console.log("New Data created!");
+				 	}
+				// });
+			//}
 		}
 	});
 }
