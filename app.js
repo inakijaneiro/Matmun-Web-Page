@@ -73,7 +73,15 @@ app.get("/comites/documento/:name", function(req, res){
 	var documento = "/public/documents/" + req.params.name;
 
 	fs.readFile(__dirname + documento, function (err,data){
-		console.log(__dirname + documento);
+        res.contentType("application/pdf");
+        res.send(data);
+    });
+});
+
+app.get("/Manual.pdf", function(req, res){
+	var manual = "/public/documents/Manual.pdf";
+	//console.log(__dirname + manual);
+	fs.readFile(__dirname + manual, function (err,data){
         res.contentType("application/pdf");
         res.send(data);
     });

@@ -6,7 +6,7 @@
             </h1>
             <% if (committee.name === "Corte Interamericana de Derechos Humanos")  { -%>
                 <p class="Comite_description">
-                    <%=committee.description%> <strong> Para conocer más sobre el documento de posición de este comité, ve el <a class="Footer_Link" href="https://youtu.be/1XIQTxEz1Rs"> video</a> que hemos preparado.</strong>
+                    <%=committee.description%> <strong> Para conocer más sobre el documento de posición de este comité, ve el <a class="Footer_Link" href="https://youtu.be/1XIQTxEz1Rs" target="_blank"> video</a> que hemos preparado.</strong>
                 </p>                
             <% } else { -%>
                 <p class="Comite_description">
@@ -89,15 +89,18 @@
         <% } -%>
         </section>
         <section class="Mesa Container">
-            <img src="../images/IMG_<%=committee.shortcut%>.JPG" alt="Escritorio" class="Mesa_img">
-            <div class="Mesa_info">
-                <% for (var i = 0; i < committee.chair.length; i++) { -%>
-                    <div class="Mesa_miembro">
-                        <p class="Mesa_nombre"><%=committee.chair[i].name%></p>
-                        <p class="Mesa_puesto"><a class="Footer_Link" href="tel:<%=committee.chair[i].number%>"><%=committee.chair[i].number%></a></p>
-                        <p class="Mesa_correo"><a class="Footer_Link" href="mailto:<%=committee.chair[i].email%>"><%=committee.chair[i].email%></a></p>
-                    </div>
-                <% } -%>
+            <h2 class="Mesa_title">Mesa y Contactos</h2>
+            <div class="Mesa_container">
+                <img src="../images/IMG_<%=committee.shortcut%>.JPG" alt="Escritorio" class="Mesa_img">
+                <div class="Mesa_info">
+                    <% for (var i = 0; i < committee.chair.length; i++) { -%>
+                        <div class="Mesa_miembro">
+                            <p class="Mesa_nombre"><%=committee.chair[i].name%></p>
+                            <p class="Mesa_puesto"><a class="Footer_Link" href="tel:<%=committee.chair[i].number%>"><%=committee.chair[i].number%></a></p>
+                            <p class="Mesa_correo"><a class="Footer_Link" href="mailto:<%=committee.chair[i].email%>"><%=committee.chair[i].email%></a></p>
+                        </div>
+                    <% } -%>
+                </div>
             </div>
         </section>
 <%include partials/footer%>
