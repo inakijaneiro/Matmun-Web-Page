@@ -8,10 +8,14 @@
                 <p class="Comite_description">
                     <%=committee.description%> <strong> Para conocer más sobre el documento de posición de este comité, ve el <a class="Footer_Link" href="https://youtu.be/1XIQTxEz1Rs" target="_blank"> video</a> que hemos preparado.</strong>
                 </p>                
-            <% } else { -%>
+            <% } else if (committee.name === "UNWOMEN"){ -%>
                 <p class="Comite_description">
-                    <%=committee.description%>
-                </p>                
+                    <%=committee.description%> <strong> To learn more about the position paper, watch the <a class="Footer_Link" href="https://m.youtube.com/watch?v=sdWCEmA83KY&rel=0" target="_blank"> video </a> we have prepared for you.</strong>
+                </p> 
+            <% } else {-%> 
+                <p class="Comite_description">
+                    <%=committee.description%> <strong> Para conocer más sobre la hoja de posición, ve el <a class="Footer_Link" href="https://m.youtube.com/watch?v=sdWCEmA83KY&rel=0" target="_blank"> video</a> que hemos preparado.</strong>
+                </p>  
             <% } -%>
             </div>
             <div class="Comite_img-container">
